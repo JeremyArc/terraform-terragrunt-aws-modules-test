@@ -18,12 +18,22 @@ variable "vpc_azs" {
   type        = list(string)
 }
 
-variable "vpc_private_subnets" {
+variable "vpc_1_private_subnets" {
   description = "CIDR blocks for private subnets"
   type        = list(string)
 }
 
-variable "vpc_public_subnets" {
+variable "vpc_2_public_subnets" {
+  description = "CIDR blocks for public subnets"
+  type        = list(string)
+}
+
+variable "vpc_2_private_subnets" {
+  description = "CIDR blocks for private subnets"
+  type        = list(string)
+}
+
+variable "vpc_1_public_subnets" {
   description = "CIDR blocks for public subnets"
   type        = list(string)
 }
