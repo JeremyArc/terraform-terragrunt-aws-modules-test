@@ -33,7 +33,6 @@ inputs = {
 
   db_subnet_group_name = "jessada-mysql-db-subnet-group"
   family = "mysql5.7"
-  major_engine_version = "5.7"
   parameters = [
     {
       name  = "character_set_client"

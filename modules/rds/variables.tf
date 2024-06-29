@@ -87,12 +87,6 @@ variable "family" {
   type = string
 }
 
-variable "major_engine_version" {
-  type = string
-  description = "The major version for the DB option group (e.g., 5.7)"
-}
-
-
 # Potential additional variable for parameters block (if needed)
 variable "parameters" {
   description = "Additional database parameters (key-value pairs)"

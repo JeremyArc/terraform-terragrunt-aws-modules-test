@@ -27,9 +27,6 @@ module "db" {
   # DB parameter group
   family = var.family
 
-  # DB option group
-  major_engine_version = var.major_engine_version
-
   parameters = var.parameters
 
 }
