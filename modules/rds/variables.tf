@@ -64,6 +64,9 @@ variable "monitoring_interval" {
   description = "The interval for enhanced monitoring (e.g., 30, in minutes)"
   type = string
 }
+variable "skip_final_snapshot" {
+  type = bool
+}
 
 variable "maintenance_window" {
   description = "A time period to start maintenance window"

@@ -22,6 +22,8 @@ module "db" {
 
   major_engine_version = var.major_engine_version
 
+  skip_final_snapshot = var.skip_final_snapshot
+
   create_db_subnet_group = var.create_db_subnet_group
   subnet_ids = var.subnet_ids
   db_subnet_group_name = var.db_subnet_group_name

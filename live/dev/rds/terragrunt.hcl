@@ -28,6 +28,7 @@ inputs = {
        Environment = "dev"
    }
   create_db_subnet_group = true
+  skip_final_snapshot = true
 
   subnet_ids = dependency.vpcs.outputs.vpc_1_private_subnet_ids
 
