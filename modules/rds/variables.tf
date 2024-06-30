@@ -80,6 +80,11 @@ variable "tags" {
   type = map(string)
 }
 
+variable "major_engine_version" {
+  description = "Major engine version for the database"
+  type = string
+}
+
 
 # Database Parameters and Options
 variable "family" {

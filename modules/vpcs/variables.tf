@@ -42,3 +42,18 @@ variable "vpc_tags" {
   description = "Tags for the VPC"
   type        = map(string)
 }
+
+
+variable "enable_vpc1_nat_gateway" {
+  description = "Enable NAT gteway on public subnet within VPC1, set to true to enable"
+  type = bool
+}
+variable "vpc1_single_nat_gateway" {
+  description = "Enable NAT gteway on public subnet within VPC1, set to false to create NAT persubnet"
+  type = bool
+}
+variable "vpc1_one_nat_gateway_per_az" {
+  description = "Enable NAT gteway on public subnet within VPC1, set to false to create NAT persubnet"
+  type = bool
+}
+

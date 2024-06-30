@@ -20,6 +20,8 @@ module "db" {
 
   tags = var.tags
 
+  major_engine_version = var.major_engine_version
+
   create_db_subnet_group = var.create_db_subnet_group
   subnet_ids = var.subnet_ids
   db_subnet_group_name = var.db_subnet_group_name
