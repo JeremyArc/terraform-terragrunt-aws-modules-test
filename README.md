@@ -28,7 +28,7 @@ terraform-terragrunt-aws-modules-test/
 ```
 
 - **modules/**: Contains reusable Terraform modules.
-- **live/**: Contains environment-specific Terragrunt configurations. e.g. dev, staging, prod
+- **live/**: Contains environment-specific Terragrunt configurations. e.g. dev, staging, prod (I only focus on dev right now.)
 
 ## Getting Started
 
