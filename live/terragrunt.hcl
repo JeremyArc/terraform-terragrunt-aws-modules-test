@@ -1,7 +1,8 @@
 locals {
-  # Parse the file path we're in to read the env name: e.g., env 
-  # will be "dev" in the dev folder, "stage" in the stage folder, 
-  # etc.
+  # regex() with expression will receive user's current directory path from get_terragrunt_dir()
+  # any path that are in "live/*" will be considered in this expression
+  # ?P<env>.*? this is a "Capturing Group" it will pass a matched string into variable named "env"
+  # ".*?" will try to match the least string (it will stop at "/" symbol)
   parsed = regex(".*/live/(?P<env>.*?)/.*", get_terragrunt_dir())
   env    = local.parsed.env
 }
