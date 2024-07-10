@@ -18,13 +18,18 @@ module "eks" {
 
   eks_managed_node_groups = var.eks_managed_node_groups
 
-  # Cluster access entry
-  # To add the current caller identity as an administrator
+  # Gives Terraform identity admin access to cluster which will
+  # allow deploying resources (Karpenter) into the cluster
   enable_cluster_creator_admin_permissions = var.enable_cluster_creator_admin_permissions
 
 
   tags = var.tags
 }
+
+# Karpenter will manage the right size node for the actual resources needed for the pod
+# https://karpenter.sh/
+# module example: https://github.com/terraform-aws-modules/terraform-aws-eks/blob/master/examples/karpenter/main.tf
+# to validate Karpenter if it work properly: https://github.com/terraform-aws-modules/terraform-aws-eks/blob/master/examples/karpenter/README.md
 
 module "karpenter" {
   source = "terraform-aws-modules/eks/aws//modules/karpenter"
